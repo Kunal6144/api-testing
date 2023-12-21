@@ -1,6 +1,7 @@
 const request = require("supertest")("https://airportgap.com/api");
 const expect = require("chai").expect;
-let bearerToken = 'rkR4WR9QSkTB8rhX2U3nHa8d';
+require('dotenv').config();
+let bearerToken = process.env.AIRPORT_GAP_TOKEN;
 
 // added a get case for airport api
 describe("GET /airports", function () {
